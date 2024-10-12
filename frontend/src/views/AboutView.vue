@@ -14,9 +14,7 @@ const categories = ref([]);
 
 const getCategories = async () => {
   try {
-    const response = await fetch(
-      `http://localhost:5000/api/v1/categories?type=0`
-    );
+    const response = await fetch(`/api/v1/categories?type=0`);
 
     if (!response.ok) {
       throw new Error('Response not OK');
