@@ -1,6 +1,7 @@
 <template>
   <div class="about">
     <h1>This is an about page, auto deploy</h1>
+    <p>asdasdassa</p>
     <p v-for="category in categories" :key="category.id">
       {{ category.id }} - {{ category.name }}
     </p>
