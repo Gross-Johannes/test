@@ -29,7 +29,8 @@ jobs:
           source ~/.bashrc && \
           export NVM_DIR=\"$HOME/.nvm\" && \
           [ -s \"$NVM_DIR/nvm.sh\" ] && \. \"$NVM_DIR/nvm.sh\" && \
-          echo 'Changed to sites/test/' && \
+          echo 'NVM_DIR is set to:' \$NVM_DIR && \
+          echo 'NPM location is:' \$(command -v npm) && \
           cd sites/test/ && \
           echo 'Pulling from git...' && \
           git pull origin main && \
