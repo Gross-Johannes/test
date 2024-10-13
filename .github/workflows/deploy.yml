@@ -25,4 +25,4 @@ jobs:
 
       - name: Build the project and deploy to server
         run: |
-          ssh -v -o StrictHostKeyChecking=no johannes@65.108.223.223 . deploy.sh
+          ssh -o StrictHostKeyChecking=no johannes@65.108.223.223 "~/deploy.sh"
