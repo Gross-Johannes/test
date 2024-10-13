@@ -25,7 +25,7 @@ jobs:
 
       - name: Build the project and deploy to server
         run: |
-          ssh johannes@65.108.223.223 "
+          ssh -o StrictHostKeyChecking=no johannes@65.108.223.223 "
           cd sites/test/ && \
           git pull origin main && \
           cd frontend && \
