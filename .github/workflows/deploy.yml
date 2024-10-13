@@ -30,10 +30,10 @@ jobs:
           cd sites/test/ && \
           git pull origin main && \
           cd frontend && \
-          npm install && \
-          npm run build && \
+          /home/johannes/.nvm/versions/node/v22.9.0/bin/npm install && \
+          /home/johannes/.nvm/versions/node/v22.9.0/bin/npm run build && \
           cd .. && \
           cd backend &&
-          npm install && \
+          /home/johannes/.nvm/versions/node/v22.9.0/bin/npm install && \
           pm2 restart all
           "
