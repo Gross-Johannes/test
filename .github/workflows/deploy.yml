@@ -27,13 +27,15 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no johannes@65.108.223.223 "
           source ~/.bashrc && \
+          export NVM_DIR=\"$HOME/.nvm\" && \
+          [ -s \"$NVM_DIR/nvm.sh\" ] && \. \"$NVM_DIR/nvm.sh\" && \
           cd sites/test/ && \
           git pull origin main && \
           cd frontend && \
-          /home/johannes/.nvm/versions/node/v22.9.0/bin/npm install && \
-          /home/johannes/.nvm/versions/node/v22.9.0/bin/npm run build && \
+          npm install && \
+          npm run build && \
           cd .. && \
-          cd backend &&
-          /home/johannes/.nvm/versions/node/v22.9.0/bin/npm install && \
+          cd backend && \
+          npm install && \
           pm2 restart all
           "
